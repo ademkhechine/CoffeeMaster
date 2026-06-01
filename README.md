@@ -1,6 +1,28 @@
 # ☕ CoffeeMaster — Coffee Shop Management System
 
-A professional, full-stack coffee shop management platform built with **React + Vite**, **Node.js + Express**, and **MongoDB**.
+![Language](https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Frontend](https://img.shields.io/badge/Frontend-React%2018%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Backend](https://img.shields.io/badge/Backend-Node.js%20%2B%20Express-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Database](https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
+A professional, full-stack coffee shop management platform **written entirely in JavaScript** — from the React frontend to the Node.js/Express backend and MongoDB data layer.
+
+---
+
+## 💻 Programming Language
+
+> **100% JavaScript** — No TypeScript, no Python, no PHP. Pure JS across the entire stack.
+
+| Layer | Language | Runtime / Framework |
+|-------|----------|---------------------|
+| Frontend UI | JavaScript (ES2022+, JSX) | React 18 + Vite |
+| State Management | JavaScript | Zustand |
+| API Client | JavaScript | Axios + TanStack Query |
+| Backend API | JavaScript (CommonJS) | Node.js 18 + Express |
+| Database ORM | JavaScript | Mongoose (MongoDB) |
+| Real-time | JavaScript | Socket.io |
+| Reports | JavaScript | PDFKit + ExcelJS |
+| Scheduled Jobs | JavaScript | node-cron |
 
 ---
 
@@ -27,22 +49,25 @@ A professional, full-stack coffee shop management platform built with **React + 
 
 ## 🛠️ Tech Stack
 
-**Frontend**
-- React 18 + Vite
-- Tailwind CSS (coffee design system)
-- Zustand (state management)
-- TanStack Query (data fetching & caching)
-- Chart.js + react-chartjs-2
-- Framer Motion (animations)
-- React Router DOM v6
+**Frontend** — JavaScript / JSX
+- ⚛️ React 18 + Vite (component-based SPA)
+- 🎨 Tailwind CSS (custom coffee design system)
+- 🐻 Zustand (lightweight JS state management)
+- 🔄 TanStack Query (async data fetching & caching)
+- 📊 Chart.js + react-chartjs-2 (data visualisation)
+- 🎞️ Framer Motion (animations & transitions)
+- 🔀 React Router DOM v6 (client-side routing)
+- 🔌 Socket.io Client (real-time WebSocket events)
 
-**Backend**
-- Node.js + Express
-- MongoDB + Mongoose
-- JWT authentication
-- Multer (file uploads)
-- PDFKit + ExcelJS (report generation)
-- node-cron (scheduled jobs)
+**Backend** — JavaScript (Node.js / CommonJS)
+- 🟢 Node.js 18 + Express.js (REST API server)
+- 🍃 MongoDB + Mongoose (NoSQL database & ODM)
+- 🔑 JSON Web Tokens — JWT (stateless authentication)
+- 📁 Multer (multipart file upload handler)
+- 📄 PDFKit (PDF receipt & report generation)
+- 📊 ExcelJS (Excel spreadsheet export)
+- ⏰ node-cron (scheduled background jobs)
+- 🔌 Socket.io (real-time Kitchen Display & dashboard)
 
 ---
 
@@ -101,10 +126,10 @@ After seeding, you can log in with:
 
 | Role | Email | Password |
 |------|-------|----------|
-| **Admin** | admin@coffeemaster.dz | password123 |
-| **Manager** | manager@coffeemaster.dz | password123 |
-| **Cashier** | cashier@coffeemaster.dz | password123 |
-| **Barista** | barista@coffeemaster.dz | password123 |
+| **Admin** | admin@coffeemaster.tn | password123 |
+| **Manager** | manager@coffeemaster.tn | password123 |
+| **Cashier** | cashier@coffeemaster.tn | password123 |
+| **Barista** | barista@coffeemaster.tn | password123 |
 
 ---
 
