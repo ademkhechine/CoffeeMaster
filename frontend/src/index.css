@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-coffee-200 dark:border-coffee-800; }
+  html { @apply scroll-smooth; }
+  body {
+    @apply bg-coffee-50 dark:bg-coffee-950 text-coffee-900 dark:text-coffee-50
+           font-sans antialiased transition-colors duration-300;
+  }
+}
+
+@layer components {
+  /* ── Cards ─────────────────────────────────── */
+  .card {
+    @apply bg-white dark:bg-coffee-900 rounded-2xl shadow-sm border border-coffee-100
+           dark:border-coffee-800 p-6 transition-all duration-200;
+  }
+  /* alias used throughout pages */
+  .card-base {
+    @apply bg-white dark:bg-coffee-900 border border-coffee-100
+           dark:border-coffee-800 transition-all duration-200;
+  }
+  .card-hover { @apply card hover:shadow-lg hover:-translate-y-0.5 cursor-pointer; }
+
+  /* ── Buttons ────────────────────────────────── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl font-semibold
+           text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed active:scale-95;
+  }
+  .btn-primary {
+    @apply btn bg-amber-500 hover:bg-amber-600 text-white focus:ring-amber-400 shadow-sm hover:shadow-md;
+  }
+  .btn-secondary {
+    @apply btn bg-coffee-100 hover:bg-coffee-200 text-coffee-800 focus:ring-coffee-300
+           dark:bg-coffee-800 dark:hover:bg-coffee-700 dark:text-coffee-100;
+  }
+  .btn-danger   { @apply btn bg-red-500 hover:bg-red-600 text-white focus:ring-red-400; }
+  .btn-success  { @apply btn bg-emerald-500 hover:bg-emerald-600 text-white focus:ring-emerald-400; }
+  .btn-ghost    { @apply btn hover:bg-coffee-100 dark:hover:bg-coffee-800 text-coffee-700 dark:text-coffee-300; }
+
+  /* ── Inputs ─────────────────────────────────── */
+  .input {
+    @apply w-full px-4 py-2.5 rounded-xl border border-coffee-200 dark:border-coffee-700
+           bg-white dark:bg-coffee-900 text-coffee-900 dark:text-coffee-50
+           focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent
+           placeholder-coffee-400 transition-all text-sm;
+  }
+  /* compact alias used in modals / filter bars */
+  .input-base {
+    @apply px-3 py-2 rounded-xl border border-coffee-200 dark:border-coffee-700
+           bg-white dark:bg-coffee-900 text-coffee-900 dark:text-coffee-50
+           focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent
+           placeholder-coffee-400 transition-all text-sm;
+  }
+
+  /* ── Labels & Badges ────────────────────────── */
+  .label { @apply block text-sm font-medium text-coffee-700 dark:text-coffee-300 mb-1.5; }
+  .badge { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold; }
+  .badge-coffee  { @apply badge bg-coffee-100 text-coffee-800 dark:bg-coffee-800 dark:text-coffee-200; }
+  .badge-success { @apply badge bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300; }
+  .badge-warning { @apply badge bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300; }
+  .badge-danger  { @apply badge bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300; }
+  .badge-info    { @apply badge bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300; }
+
+  /* ── Sidebar ────────────────────────────────── */
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium
+           transition-all duration-150 text-coffee-600 dark:text-coffee-400
+           hover:bg-coffee-100 dark:hover:bg-coffee-800 hover:text-coffee-900 dark:hover:text-coffee-100;
+  }
+  .sidebar-link.active { @apply bg-amber-500 text-white shadow-md; }
+
+  /* ── KPI & Tables ───────────────────────────── */
+  .kpi-card { @apply card flex items-center gap-4; }
+  .table-container { @apply overflow-x-auto rounded-2xl border border-coffee-100 dark:border-coffee-800; }
+  .table        { @apply w-full text-sm text-left; }
+  .table thead  { @apply bg-coffee-50 dark:bg-coffee-900/50; }
+  .table th     { @apply px-4 py-3 font-semibold text-coffee-600 dark:text-coffee-400 text-xs uppercase tracking-wide; }
+  .table td     { @apply px-4 py-3 text-coffee-800 dark:text-coffee-200 border-t border-coffee-50 dark:border-coffee-800/50; }
+  .table tr     { @apply hover:bg-coffee-50/50 dark:hover:bg-coffee-800/30 transition-colors; }
+
+  /* ── Status Pills ───────────────────────────── */
+  .status-active   { @apply badge bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400; }
+  .status-inactive { @apply badge bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400; }
+  .status-pending  { @apply badge bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400; }
+}
+
+/* ── Custom scrollbar ─────────────────────────── */
+::-webkit-scrollbar              { width: 5px; height: 5px; }
+::-webkit-scrollbar-track        { background: transparent; }
+::-webkit-scrollbar-thumb        { @apply bg-coffee-300 dark:bg-coffee-700 rounded-full; }
+::-webkit-scrollbar-thumb:hover  { @apply bg-coffee-400 dark:bg-coffee-600; }
+
+/* ── Page transition ──────────────────────────── */
+.page-enter { animation: slideUp 0.22s ease-out; }
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Gradient text ────────────────────────────── */
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500;
+}
+
+/* ── Glassmorphism ────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ── Hide number-input spinners ───────────────── */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance: textfield; }
